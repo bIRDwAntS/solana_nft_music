@@ -1,4 +1,4 @@
-# MusicChain NFT Platform
+# Music NFT Platform
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Ruby](https://img.shields.io/badge/Ruby-3.2.0-red.svg)
@@ -7,7 +7,7 @@
 
 ## Overview
 
-MusicChain is a demonstration project showcasing advanced web development skills with Ruby on Rails, Hotwire, Tailwind CSS, and Solana blockchain integration. This platform enables musicians to tokenize their albums as NFTs and establish new revenue streams through primary sales and secondary market royalties.
+This is a demonstration project showcasing advanced web development skills with Ruby on Rails, Hotwire, Tailwind CSS, and Solana blockchain integration. This platform enables musicians to tokenize their albums as NFTs and establish new revenue streams through primary sales and secondary market royalties.
 
 ## 🚀 Features
 
