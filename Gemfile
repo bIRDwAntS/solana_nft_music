@@ -66,6 +66,7 @@ group :development do
   gem "annotate", "~> 3.2"              # Pour annoter les modèles avec leurs schémas
   gem "letter_opener", "~> 1.8"         # Pour visualiser les emails en développement
   gem "rack-mini-profiler", "~> 3.1"    # Pour profiler les performances
+  gem 'hotwire-livereload', '~> 1.2'    # Pour rafraichir la page à chaque sauvegarde
 end
 
 group :test do
@@ -74,3 +75,4 @@ group :test do
   gem "shoulda-matchers", "~> 5.3"      # Pour des assertions plus lisibles
   gem "simplecov", require: false       # Pour mesurer la couverture de code
 end
+gem "redis"
