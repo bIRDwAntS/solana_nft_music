@@ -1,8 +1,7 @@
 # app/controllers/home_controller.rb
 class HomeController < ApplicationController
   def index
-    # Simplifions pour le test
-    @albums = Album.limit(5) rescue []
+    @albums = Album.all  # ou Album.order(created_at: :desc) pour avoir les plus récents
   end
 end
 
