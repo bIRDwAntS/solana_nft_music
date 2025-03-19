@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'genres/index'
+  get 'genres/show'
   # Page d'accueil
   root 'home#index'
   
