@@ -7,6 +7,7 @@
   <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
     Si vous voyez cette page, votre application Rails fonctionne correctement!
   </div>
+
   
   <% if @albums.present? %>
     <h2 class="text-xl font-bold mt-8 mb-4">Albums récents:</h2>
@@ -16,4 +17,20 @@
       <% end %>
     </ul>
   <% end %>
+</div>
+
+
+<div class="card bg-base-100 w-96 shadow-sm">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title text-green-700">Card Title</h2>
+    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
 </div>
