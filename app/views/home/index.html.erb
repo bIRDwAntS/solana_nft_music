@@ -12,7 +12,7 @@
   <h2 class="text-xl font-bold mt-8 mb-4">Albums récents:</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <% @albums.each do |album| %>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <div class="bg-(--color-main) rounded-lg shadow-md overflow-hidden">
         <div class="p-4">
           <h3 class="font-bold text-lg"><%= album.title %></h3>
           <p class="text-gray-600">Par <%= album.user.username %></p>

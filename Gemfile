@@ -76,3 +76,5 @@ group :test do
   gem "simplecov", require: false       # Pour mesurer la couverture de code
 end
 gem "redis"
+
+gem "tailwindcss-ruby", "~> 4.0"
