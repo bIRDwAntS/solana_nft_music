@@ -3,7 +3,9 @@ class TracksController < ApplicationController
   before_action :set_album
   before_action :set_track, only: [:show, :edit, :update, :mint]
   before_action :authorize_user, only: [:new, :create, :edit, :update, :mint]
+  before_action :verify_owner, only: [:edit, :update, :mint]
   
+
   def show
   end
   

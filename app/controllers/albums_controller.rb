@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_album, only: [:show, :edit, :update, :mint]
   before_action :authorize_user, only: [:edit, :update, :mint]
-  
+
   def index
     @albums = Album.where(mint_status: :minted).order(created_at: :desc)
     
@@ -29,7 +29,7 @@ class AlbumsController < ApplicationController
     @album = current_user.albums.build(album_params)
     
     if @album.save
-      redirect_to @album, notice: "Album créé avec succès."
+      redirect_to @album, notice: "Album created successfully !"
     else
       render :new, status: :unprocessable_entity
     end
@@ -40,7 +40,7 @@ class AlbumsController < ApplicationController
   
   def update
     if @album.update(album_params)
-      redirect_to @album, notice: "Album mis à jour avec succès."
+      redirect_to @album, notice: "Album updated sucessfully !"
     else
       render :edit, status: :unprocessable_entity
     end
@@ -51,9 +51,9 @@ class AlbumsController < ApplicationController
     # Cette fonction sera implémentée plus tard avec l'intégration Solana
     
     if @album.mint_nft
-      redirect_to @album, notice: "Le processus de minting a été initié. Cela peut prendre quelques minutes."
+      redirect_to @album, notice: "Minting in progress. Wait."
     else
-      redirect_to @album, alert: "Une erreur s'est produite lors du minting."
+      redirect_to @album, alert: "Error when minting"
     end
   end
   
@@ -64,7 +64,7 @@ class AlbumsController < ApplicationController
   end
   
   def authorize_user
-    redirect_to root_path, alert: "Non autorisé." unless current_user == @album.user
+    redirect_to root_path, alert: "Not Authorized !" unless current_user == @album.user
   end
   
   def album_params

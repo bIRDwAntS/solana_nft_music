@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :set_user, only: [:show, :edit, :update, :dashboard]
   before_action :authorize_user, only: [:edit, :update, :dashboard]
+  before_action :verify_self, only: [:edit, :update, :dashboard]
+ 
   
   def show
     @albums = @user.albums.where(mint_status: :minted).order(created_at: :desc)
