@@ -12,7 +12,8 @@
     <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
 
-  <body>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+       <%= render(NavbarComponent.new(current_user: current_user)) %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
