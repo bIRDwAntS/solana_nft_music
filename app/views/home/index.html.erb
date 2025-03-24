@@ -7,6 +7,14 @@
     Si vous voyez cette page, votre application Rails fonctionne correctement!
   </div>
 
+   <% if user_signed_in? %>
+    <p>Hello, <%= current_user.username %> !</p>
+    <!-- Contenu pour utilisateur connecté -->
+  <% else %>
+    <p class="text-red-500">You are not connected ! Discover Music</p>
+    <!-- Contenu pour visiteur -->
+  <% end %>
+
 <!-- message to invite new users to complete their profile -->
 <% if user_signed_in? && (current_user.bio.blank? || !current_user.profile_image.attached?) %>
   <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">

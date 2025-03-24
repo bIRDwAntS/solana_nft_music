@@ -13,10 +13,22 @@
   </head>
 
   <body class="bg-gray-50 min-h-screen flex flex-col">
-       <%= render(NavbarComponent.new(current_user: current_user)) %>
+
+     <%= render(NavbarComponent.new(
+      user_signed_in: user_signed_in?,
+      current_user: current_user
+    )) %>
+
+
     <main class="container mx-auto mt-28 px-5 flex">
+       <%= render 'shared/flash_messages' if defined?(render_flash_messages) %>
       <%= yield %>
     </main>
+
     <%= render(FooterComponent.new) %>
   </body>
 </html>
+
+
+    
+  

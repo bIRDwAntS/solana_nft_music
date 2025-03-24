@@ -9,25 +9,25 @@
         </div>
       </div>
       <div>
-        <% if @current_user %>
+        <% if user_signed_in %>
           <div class="flex items-center space-x-4">
-            <%= link_to "Créer un album", new_album_path, class: "px-3 py-2 bg-indigo-600 rounded-md text-sm font-medium hover:bg-indigo-700" %>
-            <%= link_to "Mon dashboard", dashboard_user_path(@current_user), class: "px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700" %>
+            <%= link_to "Create Album", new_album_path, class: "px-3 py-2 bg-indigo-600 rounded-md text-sm font-medium hover:bg-indigo-700" %>
+            <%= link_to "My dashboard", dashboard_user_path(current_user), class: "px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700" %>
             <div class="relative group">
               <button class="flex items-center text-sm font-medium rounded-full focus:outline-none">
-                <% if @current_user.profile_image.attached? %>
-                  <%= image_tag @current_user.profile_image.variant(resize_to_fill: [40, 40]), class: "h-8 w-8 rounded-full" %>
+                <% if current_user.profile_image.attached? %>
+                  <%= image_tag current_user.profile_image.variant(resize_to_fill: [40, 40]), class: "h-8 w-8 rounded-full" %>
                 <% else %>
                   <div class="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center">
-                    <%= @current_user.username[0].upcase %>
+                    <%= current_user.username[0].upcase %>
                   </div>
                 <% end %>
               </button>
-              <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden group-hover:block">
-                <%= link_to "Mon profil", user_path(@current_user), class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
-                <%= link_to "Modifier profil", edit_user_path(@current_user), class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
-                <%= link_to "Paramètres", edit_user_registration_path, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
-                <%= button_to "Déconnexion", destroy_user_session_path, method: :delete, class: "block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+              <div class="absolute right-0 mt-0 w-48 bg-white rounded-md shadow-lg py-1 hidden group-hover:block">
+                <%= link_to "My profil", user_path(current_user), class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+                <%= link_to "Custom my profile", edit_user_path(current_user), class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+                <%= link_to "Configuration", edit_user_registration_path, class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+                <%= button_to "Disconnect", destroy_user_session_path, method: :delete, class: "block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
               </div>
             </div>
           </div>
