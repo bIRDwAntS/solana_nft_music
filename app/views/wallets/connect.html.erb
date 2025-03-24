@@ -1,4 +1,97 @@
-<div>
-  <h1 class="font-bold text-4xl">Wallets#connect</h1>
-  <p>Find me in app/views/wallets/connect.html.erb</p>
+<!-- app/views/wallets/connect.html.erb -->
+<div class="max-w-3xl mx-auto">
+  <h1 class="text-2xl font-bold mb-6">Connecter votre portefeuille Solana</h1>
+  
+  <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+    <p class="mb-4">Pour vendre vos albums sous forme de NFT ou acheter des NFT musicaux, vous devez connecter votre portefeuille Solana.</p>
+    
+    <% if current_user.wallet_address.present? %>
+      <div class="mb-4 p-4 bg-green-50 rounded-md">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm font-medium text-green-800">Portefeuille déjà connecté</p>
+            <p class="text-sm text-green-700 mt-1"><%= current_user.wallet_address %></p>
+          </div>
+        </div>
+      </div>
+      
+      <%= button_to "Déconnecter le portefeuille", wallets_disconnect_path, method: :delete, 
+                    class: "px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" %>
+    <% else %>
+      <button id="connect-wallet" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Connecter avec Phantom
+      </button>
+      
+      <%= form_tag wallets_verify_path, method: :post, id: "wallet-form", class: "hidden" do %>
+        <%= hidden_field_tag :wallet_address, "" %>
+        <%= hidden_field_tag :signature, "" %>
+        <%= hidden_field_tag :message, "" %>
+      <% end %>
+    <% end %>
+  </div>
+  
+  <div class="bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-xl font-bold mb-4">Pourquoi connecter votre portefeuille?</h2>
+    <ul class="list-disc pl-5 space-y-2">
+      <li>Créer et vendre vos albums sous forme de NFT</li>
+      <li>Recevoir des paiements et des royalties directement sur votre portefeuille</li>
+      <li>Acheter des NFT musicaux d'autres artistes</li>
+      <li>Avoir un contrôle total sur vos actifs numériques</li>
+    </ul>
+  </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const connectButton = document.getElementById('connect-wallet');
+    const walletForm = document.getElementById('wallet-form');
+    const walletAddressField = document.getElementById('wallet_address');
+    const signatureField = document.getElementById('signature');
+    const messageField = document.getElementById('message');
+    
+    if (!connectButton) return;
+    
+    connectButton.addEventListener('click', async function() {
+      // Vérifier si Phantom est installé
+      const isPhantomInstalled = window.solana && window.solana.isPhantom;
+      
+      if (!isPhantomInstalled) {
+        alert("Veuillez installer l'extension Phantom pour connecter votre portefeuille Solana.");
+        window.open("https://phantom.app/", "_blank");
+        return;
+      }
+      
+      try {
+        // Connecter au portefeuille
+        const response = await window.solana.connect();
+        const publicKey = response.publicKey.toString();
+        
+        // Message à signer
+        const message = `Connecter mon portefeuille à NFT Music Platform: ${publicKey}`;
+        
+        // Encoder le message
+        const encodedMessage = new TextEncoder().encode(message);
+        
+        // Demander une signature
+        const { signature } = await window.solana.signMessage(encodedMessage, 'utf8');
+        
+        // Remplir le formulaire
+        walletAddressField.value = publicKey;
+        signatureField.value = signature;
+        messageField.value = message;
+        
+        // Soumettre le formulaire
+        walletForm.submit();
+        
+      } catch (error) {
+        console.error("Erreur lors de la connexion:", error);
+        alert("Erreur lors de la connexion au portefeuille: " + error.message);
+      }
+    });
+  });
+</script>
