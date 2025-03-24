@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # Page d'accueil
   root 'home#index'
   
+  resource :profile, only: [:edit, :update]
+  
   # Routes pour les utilisateurs
   resources :users, only: [:show, :edit, :update] do
     get 'dashboard', on: :member
