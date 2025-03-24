@@ -12,7 +12,7 @@
     <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
 
-  <body class="bg-gray-50 min-h-screen flex flex-col">
+ <body class="min-h-screen flex flex-col bg-gradient-to-tl from-gray-100 to-gray-300">
 
      <%= render(NavbarComponent.new(
       user_signed_in: user_signed_in?,
@@ -20,7 +20,7 @@
     )) %>
 
 
-    <main class="container mx-auto mt-28 px-5 flex text-slate-300">
+    <main class="container mx-auto mt-28 px-6  flex-col  text-slate-300">
        <%= render 'shared/flash_messages' if defined?(render_flash_messages) %>
       <%= yield %>
     </main>

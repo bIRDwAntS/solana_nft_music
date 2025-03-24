@@ -1,55 +1,48 @@
 @import "tailwindcss";
+@tailwindcss/typography
 @import "../themes/colors.css";
+@import "../themes/fonts.css";
 @plugin "./daisyui.js";
 
+
 @theme {
-    --breakpoint-*: initial;
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 1024px;
-    --breakpoint-xl: 1280px;
-
-    /* ------ Width % ------*/
-    --width-*: initial;
-    --width-xs: 28.5714286%;
-    --width-sm: 42.8571429%;
-    --width-mid: 57.1428571%;
-    --width-lg: 71.4285714%;
-    --width-xl: 85.7142857%;
-
-/* ------ Height VH------*/
-    --height-*: initial;
-    --height-xs: 25vh;
-    --height-sm: 33.333vh;
-    --height-mid: 50vh;
-    --height-large: 66.666vh;
-    --height-xl: 75vh;
-    --height-2xl: 80vh;
-    --height-3xl: 90vh;
-
-
-    /* ------ FontSize ------*/
-    --font-size-2xs: 0.625rem;
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
-    --font-size-4xl: 2.25rem;
-    --font-size-4_5xl: 2.5rem;
-    --font-size-5xl: 3rem;
-    --font-size-5_5xl: 3.5rem;
-    --font-size-6xl: 3.75rem;
-    --font-size-6_5xl: 4rem;
-    --font-size-7xl: 4.5rem;
-    --font-size-7_5xl: 5rem;
-    --font-size-8xl: 6rem;
-    --font-size-8_5xl: 7rem;
-    --font-size-9xl: 8rem;
-    --font-size-9_5xl: 9rem;
-    --font-size-10xl: 10rem;
-    --font-size-11xl: 11rem;
-    --font-size-12xl: 12rem;
+    /* Variables de polices personnalisées */
+    --font-brand: 'GravisPersonalUseRegular', sans-serif;
+    --font-base: 'Rijusans', sans-serif;
+    --font-title: 'PrayerPersonalUseBold', sans-serif;
+    --font-alt-base: 'Marianne', sans-serif;
+    --font-alt-title: 'GroovedPersonalUseRegular', sans-serif;
 }
+   
+@layer utilities {
+     /* ------ FontSize ------*/
+     .text-p { font-size: 2rem; }          /* Paragraphe standard */
+     .text-base { font-size: 2.5rem; }       /* Taille de base */
+     .text-h4 { font-size: 3rem; }       /* Heading 4 */
+     .text-h3 { font-size: 3.5rem; }       /* Heading 3 */
+     .text-h2 { font-size: 4rem; }         /* Heading 2 */
+     .text-h1 { font-size: 6.5rem; }       /* Heading 1 */
+     .text-huge-h1 { font-size: 8rem; }    /* Titre énorme */
+
+     /* Breakpoints */
+  .breakpoint-sm { width: 480px; }
+  .breakpoint-md { width: 768px; }
+  .breakpoint-lg { width: 1024px; }
+  .breakpoint-xl { width: 1280px; }
+  
+  /* Width Percentages */
+  .w-xs { width: 28.5714286%; }
+  .w-sm { width: 42.8571429%; }
+  .w-mid { width: 57.1428571%; }
+  .w-lg { width: 71.4285714%; }
+  .w-xl { width: 85.7142857%; }
+  
+  /* Height VH */
+  .h-xs { height: 25vh; }
+  .h-sm { height: 33.333vh; }
+  .h-mid { height: 50vh; }
+  .h-large { height: 66.666vh; }
+  .h-xl { height: 75vh; }
+  .h-2xl { height: 80vh; }
+  .h-3xl { height: 90vh; }
+  }

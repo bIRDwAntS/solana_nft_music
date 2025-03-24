@@ -10,6 +10,7 @@ gem "puma", ">= 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
+gem "tailwindcss-ruby", "~> 4.0"
 gem "tailwindcss-rails", "~> 4.2"
 gem "jbuilder"
 
@@ -77,4 +78,4 @@ group :test do
 end
 gem "redis"
 
-gem "tailwindcss-ruby", "~> 4.0"
+
