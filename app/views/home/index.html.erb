@@ -1,22 +1,31 @@
-<div>
+<div class="pb-20">
   <div class="grid grid-cols-3 gap-xl">
-    <div class="col-span-2 w-full flex flex-col items-start gap-0">
-    <h1 class="font-alt-base text-h1 text-main uppercase">Human-made music for humans</h1>
+    <div class="col-span-2 w-full flex flex-col items-start gap-6">
+    <h1 class="font-title  text-huge-h1 text-black uppercase leading-none">Human-made music for humans</h1>
     <h2 class="font-base text-h4 text-main text-left w-lg leading-tight">
-        Transform your music into NFTs on Solana, maintain full creative control, and earn royalties with every resale—your art, your terms.
+        Your music on blockchain. Explore, listen, share, build.
     </h2>
-     <%= link_to "start now", new_user_registration_path, class: "btn bg-slate-600 font-base text-lg font-medium text-white border-none mt-5 rounded-xl px-8 hover:bg-smoke shadow-nonec transition-all duration-200 ease-in- hover:-translate-y-1 hover:translate-x-1 hover:-rotate-2 hover:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" %>
+     <%= link_to new_user_registration_path do %>
+     <div class="group flex gap-2 items-center bg-slate-100 text-smoke border-b-1 border-slate-800/30 rounded-md px-24 py-2 shadow-none transition-all duration-300 ease-in-out hover:gap-6 hover:bg-smoke hover:text-white hover:-translate-y-1 hover:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
+         <p class="font-base text-lg font-light font-mediu">
+          start now
+         </p>
+          <span class="w-6 h-6 group-hover:rotate-45">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full h-full"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><circle cx="12" cy="12" r="2"/><circle cx="18" cy="9" r="2"/><path d="M15.318 3.631a9 9 0 1 0 5.368 10.736M20 9V2l2 2"/></g></svg>
+         </span>
+     </div>
+      <% end %>
   </div>
 
 <%= link_to new_user_session_path, class: "no-underline group flex flex-col bg-mint px-6 py-8 rounded-4xl justify-between w-xl hover:-rotate-2 transition-discrete duration-300 ease-in-out hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]" do %>
 
     <div class="flex flex-row justify-between">
-      <p class="font-base italic text-h3 text-smoke text-left w-sm leading-none">Already have an account?</p>
-      <div class="w-16 h-16 bg-smoke text-white rounded-full flex items-center justify-center text-center flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:rotate-40">
+      <p class="font-title italic text-h2 text-smoke text-left w-sm leading-none transition-all duration-400 ease-in-out group-hover:rotate-2">Already have an account?</p>
+      <div class="w-16 h-16 bg-smoke text-white rounded-full flex items-center justify-center text-center flex-shrink-0 transition-all duration-400 ease-in-out group-hover:-rotate-10 group-hover:w-17">
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" class="w-8 h-8"><path fill="currentColor" d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414"/></svg>
       </div>
     </div>
-    <div class="flex flex-col gap-2 text-main font-base text-p">
+    <div class="flex flex-col gap-2 text-main font-base font-black text-p transition-all duration-400 ease-in-out group-hover:rotate-2">
       <p >
         Sign-in, start to sell your music, listen to hundreds of albums, connect with other artists, build your network, and so much more.
       </p>

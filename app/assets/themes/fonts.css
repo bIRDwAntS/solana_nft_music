@@ -1,14 +1,14 @@
 @font-face {
-    font-family: 'GravisPersonalUseRegular';
-    src: url('./fonts/GravisPersonalUseRegular-w1ZOx.ttf') format('truetype');
+    font-family: 'Dirtyboy';
+    src: url('./fonts/Dirtyboy.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'GroovedPersonalUseRegular';
-    src: url('./fonts/GroovedPersonalUseRegular-9Y350.ttf') format('truetype');
+    font-family: 'Dirtha';
+    src: url('./fonts/Ditha.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,32 +17,24 @@
 
 @font-face {
     font-family: 'Marianne';
-    src: url('./fonts/Marianne-K7qYy.ttf') format('truetype');
+    src: url('./fonts/Marianne.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'PrayerPersonalUseBold';
-    src: url('./fonts/PrayerPersonalUseBold-BWnDx.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rijusans';
-    src: url('./fonts/Rijusans-gwAvR.ttf') format('truetype');
+    font-family: 'Nugo';
+    src: url('./fonts/Nugo.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'RijusansItalic';
-    src: url('./fonts/RijusansItalic-XGy2d.ttf') format('truetype');
+    font-family: 'Dush';
+    src: url('./fonts/Dush.otf') format('opentype');
     font-weight: normal;
-    font-style: italic;
+    font-style: normal;
     font-display: swap;
 }

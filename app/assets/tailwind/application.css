@@ -6,11 +6,11 @@
 
 @theme {
     /* Variables de polices personnalisées */
-    --font-brand: 'GravisPersonalUseRegular', sans-serif;
-    --font-base: 'Rijusans', sans-serif;
-    --font-title: 'PrayerPersonalUseBold', sans-serif;
-    --font-alt-base: 'Marianne', sans-serif;
-    --font-alt-title: 'GroovedPersonalUseRegular', sans-serif;
+    --font-brand: 'Dirtyboy', sans-serif;
+    --font-base: 'Nugo', sans-serif;
+    --font-title: 'Dirtha', sans-serif;
+    --font-alt: 'Marianne', sans-serif;
+    --font-dush: 'Dush', sans-serif;
 }
    
 @layer utilities {
@@ -20,7 +20,7 @@
      .text-base { font-size: 1.5rem; }       /* Taille de base */
      .text-h4 { font-size: 2rem; }       /* Heading 4 */
      .text-h3 { font-size: 2.5rem; }       /* Heading 3 */
-     .text-h2 { font-size: 4rem; }         /* Heading 2 */
+     .text-h2 { font-size: 3.5rem; }         /* Heading 2 */
      .text-h1 { font-size: 6.5rem; }       /* Heading 1 */
      .text-huge-h1 { font-size: 8rem; }    /* Titre énorme */
 
