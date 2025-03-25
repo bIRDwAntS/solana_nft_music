@@ -1,0 +1,13 @@
+<div id="trending-artist" class="bg-(--color-main) rounded-lg shadow-md overflow-hidden">
+  <div class="p-4">
+    <h3 class="font-bold text-lg"><%= artist.username %></h3>
+    <p class="text-gray-600">Artiste en tendance</p>
+    <% if artist.bio.present? %>
+      <p class="mt-2"><%= artist.bio %></p>
+    <% end %>
+    <p class="mt-2 text-sm text-gray-500">
+      <%= artist.albums.count %> albums • 
+      <%= pluralize(artist.views_count, 'vue', 'vues') %>
+    </p>
+  </div>
+</div>

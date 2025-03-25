@@ -41,3 +41,9 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :bio, :wallet_address, :profile_image)
   end
 end
+
+def index
+  @albums = Album.order(created_at: :desc).limit(3)
+  # get the artist with the most views
+  @trending_artist = User.where(role: "artist").order(views_count: :desc).first
+end

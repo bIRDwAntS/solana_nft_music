@@ -1,5 +1,5 @@
-<div class="pb-20">
-  <div class="grid grid-cols-3 gap-xl">
+<div class="pb-2">
+  <div class="grid grid-cols-3 gap-xl relative z-10 ">
     <div class="col-span-2 w-full flex flex-col items-start gap-6">
     <h1 class="font-title  text-huge-h1 text-black uppercase leading-none">Human-made music for humans</h1>
     <h2 class="font-base text-h4 text-main text-left w-lg leading-tight">
@@ -7,7 +7,7 @@
     </h2>
      <%= link_to new_user_registration_path do %>
      <div class="group flex gap-2 items-center bg-slate-100 text-smoke border-b-1 border-slate-800/30 rounded-md px-24 py-2 shadow-none transition-all duration-300 ease-in-out hover:gap-6 hover:bg-smoke hover:text-white hover:-translate-y-1 hover:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
-         <p class="font-base text-lg font-light font-mediu">
+         <p class="font-base text-lg  font-medium">
           start now
          </p>
           <span class="w-6 h-6 group-hover:rotate-45">
@@ -17,7 +17,7 @@
       <% end %>
   </div>
 
-<%= link_to new_user_session_path, class: "no-underline group flex flex-col bg-mint px-6 py-8 rounded-4xl justify-between w-xl hover:-rotate-2 transition-discrete duration-300 ease-in-out hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]" do %>
+<%= link_to new_user_session_path, class: "no-underline group flex flex-col bg-mint px-6 py-6 rounded-4xl justify-between w-xl hover:-rotate-2 transition-discrete duration-300 ease-in-out hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]" do %>
 
     <div class="flex flex-row justify-between">
       <p class="font-title italic text-h2 text-smoke text-left w-sm leading-none transition-all duration-400 ease-in-out group-hover:rotate-2">Already have an account?</p>
@@ -25,17 +25,59 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" class="w-8 h-8"><path fill="currentColor" d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414"/></svg>
       </div>
     </div>
-    <div class="flex flex-col gap-2 text-main font-base font-black text-p transition-all duration-400 ease-in-out group-hover:rotate-2">
+    <div class="flex flex-col gap-5 text-main font-base font-black text-p transition-all duration-400 ease-in-out group-hover:rotate-2">
       <p >
         Sign-in, start to sell your music, listen to hundreds of albums, connect with other artists, build your network, and so much more.
       </p>
-      <p class="transition-all duration-300 ease-in-out group-hover:text-black group-hover:font-bold group-hover:underline">
-        Log in now !
-      </p>
+ <p class="lowercase font-thin transition-all duration-300 ease-in-out">
+ <span class="inline-block group-hover:rotate-4">l</span>
+ <span class="inline-block group-hover:-rotate-10">o</span>
+ <span class="inline-block group-hover:rotate-15">g</span>
+ 
+ <span class="inline-block group-hover:rotate-5">i</span>
+ <span class="inline-block group-hover:-rotate-7">n</span>
+ <span class="inline-block group-hover:rotate-8"> </span>
+ <span class="inline-block group-hover:-rotate-9">n</span>
+ <span class="inline-block group-hover:rotate-2">o</span>
+ <span class="inline-block group-hover:-rotate-6">w</span>
+ <span class="inline-block group-hover:rotate-7"> </span>
+ <span class="inline-block group-hover:rotate-6">!</span>
+</p>
     </div>
-
   <% end %>
   </div>
+ 
+  <!-- cirlces background design -->
+ <div class="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-lime-300 to-yellow-300 opacity-80 blur-3xl"></div>
+  
+
+  <div class="absolute top-1/2 right-1/5 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 opacity-80 blur-3xl"></div>
+  
+ 
+  <div class="absolute top-1/5 left-0 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-green-400 to-emerald-400 opacity-70 blur-3xl mix-blend-screen"></div>
+</div>
+ 
+
+<section class="container min-h-[80rem] bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-md mt-15 border-l-8 border-t-6 border-slate-100 px-10 py-8 relative">
+  <div class="group absolute -top-3 left-2 bg-smoke px-12 py-4 rounded-md max-w-md transition-all duration-300 ease-in hover:-top-7 hover:translate-x-2 hover:-translate-y-2 hover:-rotate-5 hover:shadow-[5px_5px_0px_0px_rgba(109,40,217)]">
+    <h1 class="font-dush text-base flex gap-2 transition-all duration-300 ease-in-out group-hover:gap-4">
+      trending now <span>!</span> <span class="hidden group-hover:inline">!</span><span class="hidden group-hover:inline">!</span>
+    </h1>
+  </div>
+
+  <div>
+    <h2 class="text-xl font-bold mt-8 mb-4">Artiste en tendance :</h2>
+<%= turbo_frame_tag "trending_artist" do %>
+  <%= render(TrendingArtistComponent.new(artist: @trending_artist)) %>
+<% end %>
+  </div>
+
+</section>
+
+
+
+
+
 
 <!--
    <% if user_signed_in? %>
@@ -86,6 +128,5 @@
   </div>
 <% end %>
 -->
-</div>
 
 

@@ -14,6 +14,9 @@
 }
    
 @layer utilities {
+    .text-shadow {
+        text-shadow: 0 6px 4px rgb(0, 0, 0);
+      }
     /* .bg-mint { background-color: #BDE9E8;} */
      /* ------ FontSize ------*/
      .text-p { font-size: 1.1rem; }          /* Paragraphe standard */
@@ -45,4 +48,5 @@
   .h-xl { height: 75vh; }
   .h-2xl { height: 80vh; }
   .h-3xl { height: 90vh; }
+
   }

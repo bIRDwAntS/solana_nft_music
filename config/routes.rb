@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update] do
     get 'dashboard', on: :member
   end
+
+  # Route to get trending Artists
+    get 'update_trending_artist', to: 'home#update_trending_artist'
   
   # Routes pour les albums
   resources :albums do

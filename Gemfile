@@ -68,6 +68,7 @@ group :development do
   gem "letter_opener", "~> 1.8"         # Pour visualiser les emails en développement
   gem "rack-mini-profiler", "~> 3.1"    # Pour profiler les performances
   gem 'hotwire-livereload', '~> 1.2'    # Pour rafraichir la page à chaque sauvegarde
+  gem "rails_live_reload"
 end
 
 group :test do
