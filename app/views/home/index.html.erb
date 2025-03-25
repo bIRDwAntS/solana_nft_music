@@ -58,19 +58,20 @@
 </div>
  
 
-<section class="container min-h-[80rem] bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-md mt-15 border-l-8 border-t-6 border-slate-100 px-10 py-8 relative">
-  <div class="group absolute -top-3 left-2 bg-smoke px-12 py-4 rounded-md max-w-md transition-all duration-300 ease-in hover:-top-7 hover:translate-x-2 hover:-translate-y-2 hover:-rotate-5 hover:shadow-[5px_5px_0px_0px_rgba(109,40,217)]">
+<section class="container flex flex-col gap-5 min-h-[80rem] bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 rounded-md mt-15 border-l-8 border-t-6 border-slate-100 px-10 py-8 relative">
+  <a href="#trending-art" class="group absolute -top-5 left-2 bg-smoke px-12 py-4 rounded-md max-w-md transition-all duration-300 ease-in hover:-top-7 hover:translate-x-2 hover:-translate-y-2 hover:-rotate-5 hover:shadow-[5px_5px_0px_0px_rgba(109,40,217)]">
     <h1 class="font-dush text-base flex gap-2 transition-all duration-300 ease-in-out group-hover:gap-4">
-      trending now <span>!</span> <span class="hidden group-hover:inline">!</span><span class="hidden group-hover:inline">!</span>
+      trending now <span>!</span> 
     </h1>
-  </div>
+  </a>
 
-  <div>
-    <h2 class="text-xl font-bold mt-8 mb-4">Artiste en tendance :</h2>
-<%= turbo_frame_tag "trending_artist" do %>
-  <%= render(TrendingArtistComponent.new(artist: @trending_artist)) %>
-<% end %>
+  <div class="mt-20">
+    <%= turbo_frame_tag "trending_artist" do %>
+    <%= render(TrendingArtistComponent.new(artist: @trending_artist)) %>
+    <% end %>
   </div>
+    
+   
 
 </section>
 

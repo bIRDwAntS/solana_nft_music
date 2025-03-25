@@ -1,4 +1,45 @@
-<div id="trending-artist" class="bg-(--color-main) rounded-lg shadow-md overflow-hidden">
+<article id="trending-art" class="relative w-full rounded-lg bg-cover bg-center" style="background-image: url('shuheart.jpg')">
+    
+   <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/95 to-transparent opacity-95"></div>
+    <div class="relative grid grid-cols-3 gap-xl py-20 px-10 z-10">
+         <div class="col-span-2 container w-lg  flex flex-col gap-4">
+        <h1 class="font-title text-h2 text-white">
+        <%= artist.username %>
+    </h1>
+    <div class="space-y-4">
+      <h2 class="font-base text-base text-white italic uppercase inline-block px-8 py-0.5 bg-smoke border-b-3 border-l-2 border-mint">
+        About the artist
+      </h2>
+       <% if artist.bio.present? %>
+      <p class="font-base text-p text-white"><%= artist.bio %></p>
+       <% end %>
+    </div>
+     </div>
+     <div class="flex flex-col justify-end items-start">
+        <div>
+    <% if defined?(current_user) && current_user %>
+      <p>Hello, <%= current_user.username %> !</p>
+    <% else %>
+      <%= link_to new_user_session_path, class: "inline-block py-0.5 px-8 bg-slate-800 text-white font-base text-base" do %>
+       <p>connect</p>
+      <% end %>
+    <% end %>
+  </div>
+        <p class="mt-2 text-sm text-gray-500">
+      <%= artist.albums.count %> albums • 
+      <%= pluralize(artist.views_count, 'vue', 'vues') %>
+    </p>
+     </div>
+    </div>
+</article>
+
+
+
+
+
+
+<!-- 
+<article id="trending-artist" class="container bg-(--color-main) rounded-lg shadow-md overflow-hidden">
   <div class="p-4">
     <h3 class="font-bold text-lg"><%= artist.username %></h3>
     <p class="text-gray-600">Artiste en tendance</p>
@@ -10,4 +51,5 @@
       <%= pluralize(artist.views_count, 'vue', 'vues') %>
     </p>
   </div>
-</div>
+</article>
+-->

@@ -17,6 +17,9 @@
     .text-shadow {
         text-shadow: 0 6px 4px rgb(0, 0, 0);
       }
+      html {
+        scroll-behavior: smooth;
+      }
     /* .bg-mint { background-color: #BDE9E8;} */
      /* ------ FontSize ------*/
      .text-p { font-size: 1.1rem; }          /* Paragraphe standard */
