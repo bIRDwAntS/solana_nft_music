@@ -12,7 +12,7 @@
     <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
 
- <body class="min-h-screen flex flex-col bg-gradient-to-tl from-gray-100 to-gray-300">
+ <body class="w-full min-h-screen flex flex-col bg-gradient-to-tl from-gray-100 to-gray-300">
 
      <%= render(NavbarComponent.new(
       user_signed_in: user_signed_in?,
@@ -20,12 +20,14 @@
     )) %>
 
 
-    <main class="container mx-auto mt-28 px-6  flex-col  text-slate-300">
+    <main class="container mx-auto mt-20 py-8 flex-col flex-grow">
        <%= render 'shared/flash_messages' if defined?(render_flash_messages) %>
       <%= yield %>
     </main>
 
-    <%= render(FooterComponent.new) %>
+    <div class="mt-auto">
+      <%= render(FooterComponent.new) %>
+    </div>
   </body>
 </html>
 

@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@tailwindcss/typography
 @import "../themes/colors.css";
 @import "../themes/fonts.css";
 @plugin "./daisyui.js";
@@ -15,11 +14,12 @@
 }
    
 @layer utilities {
+    /* .bg-mint { background-color: #BDE9E8;} */
      /* ------ FontSize ------*/
-     .text-p { font-size: 2rem; }          /* Paragraphe standard */
-     .text-base { font-size: 2.5rem; }       /* Taille de base */
-     .text-h4 { font-size: 3rem; }       /* Heading 4 */
-     .text-h3 { font-size: 3.5rem; }       /* Heading 3 */
+     .text-p { font-size: 1.1rem; }          /* Paragraphe standard */
+     .text-base { font-size: 1.5rem; }       /* Taille de base */
+     .text-h4 { font-size: 2rem; }       /* Heading 4 */
+     .text-h3 { font-size: 2.5rem; }       /* Heading 3 */
      .text-h2 { font-size: 4rem; }         /* Heading 2 */
      .text-h1 { font-size: 6.5rem; }       /* Heading 1 */
      .text-huge-h1 { font-size: 8rem; }    /* Titre énorme */

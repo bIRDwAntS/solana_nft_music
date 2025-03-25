@@ -1,26 +1,43 @@
-<div class="container mx-auto px-4 py-8">
-  <h1 class="font-brand text-h1 mb-6 text-black">Monotone</h1>
-  
-  <div class="flex-col gap-5">
-    <p class="font-title text-base mb-6 text-slate-600">Human-made music for humans</p>
-     <p class="font-base text-p mb-6 text-black">Plateforme de musique NFT sur Solana</p>
-      <p class="font-alt-title text-h2 mb-6 text-slate-600">Plateforme de musique NFT sur Solana</p>
-       <p class="font-alt-base text-h3 mb-6 text-slate-600">Plateforme de musique NFT sur Solana</p>
-  </div>
-  
-  <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-    Si vous voyez cette page, votre application Rails fonctionne correctement!
+<div>
+  <div class="grid grid-cols-3 gap-xl">
+    <div class="col-span-2 w-full flex flex-col items-start gap-0">
+    <h1 class="font-alt-base text-h1 text-main uppercase">Human-made music for humans</h1>
+    <h2 class="font-base text-h4 text-main text-left w-lg leading-tight">
+        Transform your music into NFTs on Solana, maintain full creative control, and earn royalties with every resale—your art, your terms.
+    </h2>
+     <%= link_to "start now", new_user_registration_path, class: "btn bg-slate-600 font-base text-lg font-medium text-white border-none mt-5 rounded-xl px-8 hover:bg-smoke shadow-nonec transition-all duration-200 ease-in- hover:-translate-y-1 hover:translate-x-1 hover:-rotate-2 hover:shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" %>
   </div>
 
+<%= link_to new_user_session_path, class: "no-underline group flex flex-col bg-mint px-6 py-8 rounded-4xl justify-between w-xl hover:-rotate-2 transition-discrete duration-300 ease-in-out hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]" do %>
+
+    <div class="flex flex-row justify-between">
+      <p class="font-base italic text-h3 text-smoke text-left w-sm leading-none">Already have an account?</p>
+      <div class="w-16 h-16 bg-smoke text-white rounded-full flex items-center justify-center text-center flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:rotate-40">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" class="w-8 h-8"><path fill="currentColor" d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414"/></svg>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 text-main font-base text-p">
+      <p >
+        Sign-in, start to sell your music, listen to hundreds of albums, connect with other artists, build your network, and so much more.
+      </p>
+      <p class="transition-all duration-300 ease-in-out group-hover:text-black group-hover:font-bold group-hover:underline">
+        Log in now !
+      </p>
+    </div>
+
+  <% end %>
+  </div>
+
+<!--
    <% if user_signed_in? %>
     <p>Hello, <%= current_user.username %> !</p>
-    <!-- Contenu pour utilisateur connecté -->
+     Contenu pour utilisateur connecté 
   <% else %>
     <p class="text-red-500">You are not connected ! Discover Music</p>
-    <!-- Contenu pour visiteur -->
   <% end %>
+  -->
 
-<!-- message to invite new users to complete their profile -->
+<!-- message to invite new users to complete their profile 
 <% if user_signed_in? && (current_user.bio.blank? || !current_user.profile_image.attached?) %>
   <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
     <div class="flex">
@@ -38,9 +55,11 @@
     </div>
   </div>
 <% end %>
+-->
 
+<!-- 
  <% if @albums.present? %>
-  <h2 class="text-xl font-bold mt-8 mb-4">Albums récents:</h2>
+  <h2 class="text-xl font-bold mt-8 mb-4">Latest albums :</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <% @albums.each do |album| %>
       <div class="bg-(--color-main) rounded-lg shadow-md overflow-hidden">
@@ -57,6 +76,7 @@
     <% end %>
   </div>
 <% end %>
+-->
 </div>
 
 
