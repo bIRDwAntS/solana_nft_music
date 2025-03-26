@@ -1,4 +1,65 @@
-<div class="bg-amber-100 p-6 rounded-lg">
+<section class="relative container  md:min-h-[80vh] w-full flex flex-col items-center justify-start">
+  <div class="relative bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 w-sm h-[80vh] flex flex-col items-center text-center rounded-2xl gap-2 border-l-6 border-t-4 border-white">
+    <div class="flex flex-col gap-0 items-center">
+      <div class="w-32 h-32 animate-float">
+        <img src="/panda.webp" alt="logo of a floating panda" class="w-full h-full">
+      </div>
+      <p class="font-title text-h3 text-white md:-mt-2">
+        welcome back !
+      </p>
+    </div>
+    <p class="font-base text-sm text-white uppercase w-lg">
+      Log in to Monotone Panda to continue with the Platform.
+    </p>
+    <div class=" w-md  flex flex-col items-center mt-5">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs flex flex-col items-center gap-5 ">
+      <%= f.input :email,
+                  label: 'Email :',
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email",
+                  class: "w-full px-2 py-4  text-smoke"
+                   },
+                   wrapper_html: { class: "bg-white font-base capitalize text-smoke" } %>
+      <%= f.input :password,
+                  label: 'Pwd :',
+                  required: false,
+                  input_html: { autocomplete: "current-password",
+                  class: "w-full px-2 py-4  text-smoke" },
+                   wrapper_html: { class: "bg-white font-base capitalize text-smoke bold" }  %>
+     <!--  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %> -->
+    </div>
+
+    <div class="form-actions mt-10 flex flex-col items-center">
+      <button type="submit" class="group flex gap-4 items-center bg-smoke text-white border-b-1 border-slate-800/30 rounded-md px-24 py-2 shadow-none transition-all duration-300 ease-in-out hover:bg-white hover:text-smoke md:hover:border-r-3 md:hover:border-b-4 md:hover:-translate-y-2  md:hover:border-smoke">
+      <div class="w-8 h-8 block md:group-hover:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-full h-full"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 5l3-3M2 22l3-3m1.3 1.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6l-2.3 2.3a2.4 2.4 0 0 0 0 3.4Zm1.2-6.8L10 11m.5 5.5L13 14m-1-8l6 6l2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></svg>
+      </div>
+      <div class="w-8 h-8 hidden md:group-hover:block">
+        <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" class="w-full h-full"><path fill="currentColor" d="M237.66 18.34a8 8 0 0 0-11.32 0l-52.4 52.41l-5.37-5.38a32.05 32.05 0 0 0-45.26 0L100 88.69l-6.34-6.35a8 8 0 0 0-11.32 11.32l6.35 6.34l-23.32 23.31a32 32 0 0 0 0 45.26l5.38 5.37l-52.41 52.4a8 8 0 0 0 11.32 11.32l52.4-52.41l5.37 5.38a32 32 0 0 0 45.26 0L156 167.31l6.34 6.35a8 8 0 0 0 11.32-11.32l-6.35-6.34l23.32-23.31a32 32 0 0 0 0-45.26l-5.38-5.37l52.41-52.4a8 8 0 0 0 0-11.32m-116.29 161a16 16 0 0 1-22.62 0l-22.06-22.09a16 16 0 0 1 0-22.62L100 111.31L144.69 156Zm57.94-57.94L156 144.69L111.31 100l23.32-23.31a16 16 0 0 1 22.62 0l22.06 22a16 16 0 0 1 0 22.68ZM88.57 35a8 8 0 0 1 14.86-6l8 20a8 8 0 0 1-14.86 6Zm-64 58A8 8 0 0 1 35 88.57l20 8a8 8 0 0 1-6 14.86l-20-8A8 8 0 0 1 24.57 93m206.86 70a8 8 0 0 1-10.4 4.46l-20-8a8 8 0 1 1 5.97-14.89l20 8a8 8 0 0 1 4.43 10.43m-64 58.06a8 8 0 0 1-14.86 5.94l-8-20a8 8 0 0 1 14.86-6Z"/></svg>
+      </div>
+        <p>
+          C<span class="inline-block md:group-hover:-rotate-12">o</span>n<span class="inline-block md:group-hover:rotate-8">n</span>ec<span class="inline-block md:group-hover:-rotate-9">t</span>
+        </p>
+      </button>
+    </div>
+  <% end %>
+    </div>
+    <div class="absolute bottom-0 w-md px-8 py-6">
+      <p class="font-base text-xs text-slate-200">
+        By continuing, you agree to Monotone Panda's Terms of Service and Privacy Policy.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<!-- 
+  <div class="bg-slate-800 p-6 rounded-lg">
   <h2 class="text-xl font-bold mb-4">Connexion</h2>
 
   <% if flash[:alert] %>
@@ -36,7 +97,7 @@
     <%= render "devise/shared/links" %>
   </div>
 
-  <!-- Affichage de débogage temporaire -->
+  Affichage de débogage temporaire
   <% if Rails.env.development? %>
     <div class="mt-6 p-4 bg-gray-100 rounded text-xs font-mono">
       <p>Debug info:</p>
@@ -44,3 +105,6 @@
     </div>
   <% end %>
 </div>
+
+
+-->

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "../themes/colors.css";
 @import "../themes/fonts.css";
+@import "../themes/animations.css";
 @plugin "./daisyui.js";
 
 
@@ -20,8 +21,13 @@
       html {
         scroll-behavior: smooth;
       }
+
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
     /* .bg-mint { background-color: #BDE9E8;} */
      /* ------ FontSize ------*/
+     .text-xs { font-size: 0.80rem;}
      .text-sm { font-size: 0.95rem;}
      .text-p { font-size: 1.1rem; }          /* Paragraphe standard */
      .text-base { font-size: 1.5rem; }       /* Taille de base */
