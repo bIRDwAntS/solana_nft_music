@@ -1,13 +1,13 @@
-<article id="trending-art" class="relative w-full rounded-lg bg-cover bg-center" style="background-image: url('shuheart.jpg')">
+<article id="trending-art" class="py-20 px-10 relative w-full rounded-lg bg-cover bg-center" style="background-image: url('shuheart.webp')">
     
    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/95 to-transparent opacity-95"></div>
-    <div class="relative grid grid-cols-3 gap-xl py-20 px-10 z-10">
+    <div class="relative grid grid-cols-3 gap-xl z-10">
          <div class="col-span-2 container w-lg  flex flex-col gap-4">
         <h1 class="font-title text-h2 text-white">
         <%= artist.username %>
     </h1>
     <div class="space-y-4">
-      <h2 class="font-base text-p text-white italic uppercase inline-block px-8 py-0.5 bg-smoke border-b-3 border-l-2 border-mint">
+      <h2 class="font-base text-p text-white italic uppercase inline-block px-8 py-0.5 bg-smoke">
         About the artist
       </h2>
        <% if artist.bio.present? %>
@@ -29,13 +29,15 @@
           <p class="font-alt text-p text-center pt-2">members only - log in first</p>
         </div>
         <div class="flex flex-row items-center gap-4">
-            <p class="group inline-flex items-center text-center gap-3 bg-smoke py-2 px-8 rounded-md font-base font-medium text-p text-white whitespace-nowrap transition-all duration-300 ease-in-out hover:bg-slate-100 hover:text-smoke">
-               <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-4 h-4 flex-shrink-0 group-hover:-rotate-10"><path fill="currentColor" d="M19 14v3c0 .55-.45 1-1 1h-1v-4zM7 14v4H6c-.55 0-1-.45-1-1v-3zm5-13a9 9 0 0 0-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7a9 9 0 0 0-9-9"/></svg></span> listen online
+            <p class="group inline-flex items-center text-center bg-smoke py-2 px-8 rounded-md font-base font-medium text-p text-white whitespace-nowrap border-t-1 border-r-1 border-mint transition-all duration-300 ease-in-out md:hover:bg-mint hover:text-smoke">
+               <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-5 h-5 flex-shrink-0 group-hover:-rotate-10 mr-3"><path fill="currentColor" d="M19 14v3c0 .55-.45 1-1 1h-1v-4zM7 14v4H6c-.55 0-1-.45-1-1v-3zm5-13a9 9 0 0 0-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7a9 9 0 0 0-9-9"/></svg></span> l<span class="group-hover:rotate-6">i</span>s<span class="group-hover:rotate-8">t</span>en o<span class="group-hover:-rotate-6">n</span>li<span class="group-hover:-rotate-4">n</span>e
             </p>
-             <p class="group inline-flex items-center text-center gap-3 bg-smoke py-2 px-8 rounded-md font-base font-medium text-p text-white whitespace-nowrap transition-all duration-300 ease-in-out hover:bg-slate-100 hover:text-smoke">
+             <p class="group inline-flex items-center text-center bg-smoke py-2 px-8 rounded-md font-base font-medium text-p text-white whitespace-nowrap border-b-1 border-r-1 border-slate-100 transition-all duration-300 ease-in-out hover:bg-slate-100 hover:text-smoke">
                <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-5 h-5 flex-shrink-0 group-hover:-rotate-10"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h12l4-4H8zm4-4l-4-4h12l4 4m-4-4l4-4H8l-4 4"/></svg>
-               </span> buy music
+                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" class="w-5 h-5 flex-shrink-0 group-hover:-rotate-10 mr-3"><rect width="416" height="320" x="48" y="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="56" ry="56"/><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="60" d="M48 192h416M128 300h48v20h-48z"/></svg>
+                <!-- 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="w-5 h-5 flex-shrink-0 group-hover:-rotate-10 mr-3"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h12l4-4H8zm4-4l-4-4h12l4 4m-4-4l4-4H8l-4 4"/></svg> -->
+               </span> b<span class="group-hover:rotate-6">u</span>y m<span class="group-hover:rotate-8">u</span>si<span class="group-hover:rotate-4">c</span>
             </p>
         </div>
       </div>
@@ -47,6 +49,11 @@
       <%= pluralize(artist.views_count, 'vue', 'vues') %>
     </p>
      </div>
+    </div>
+    <div class="absolute bottom-4 left-10 z-10 mt-5">
+      <p class="font-main text-sm text-slate-700 whitespace-nowrap transition-colors duration-200 ease-in-out">
+       Photo by <a href="https://unsplash.com/@mirrors_are_more_fun?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener noreferrer" class="md:hover:text-slate-500 italic">Red Shuheart</a> on <a href="https://unsplash.com/photos/people-walk-past-a-store-in-the-rain-at-night-mXwEuZR2sgE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener noreferrer" class="md:hover:text-slate-500 italic">Unsplash</a>
+      </p>
     </div>
 </article>
 
