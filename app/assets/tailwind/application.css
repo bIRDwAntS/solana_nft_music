@@ -4,7 +4,6 @@
 @import "../themes/animations.css";
 @plugin "./daisyui.js";
 
-
 @theme {
     /* Variables de polices personnalisées */
     --font-brand: 'Dirtyboy', sans-serif;
@@ -12,9 +11,11 @@
     --font-title: 'Dirtha', sans-serif;
     --font-alt: 'Marianne', sans-serif;
     --font-dush: 'Dush', sans-serif;
-}
+    }
+
    
 @layer utilities {
+
     .text-shadow {
         text-shadow: 0 6px 4px rgb(0, 0, 0);
       }

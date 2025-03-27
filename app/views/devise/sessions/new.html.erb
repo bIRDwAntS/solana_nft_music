@@ -16,7 +16,7 @@
     <div class="form-inputs flex flex-col items-center gap-5 ">
       <%= f.input :email,
                   label: 'Email :',
-                  required: false,
+                  required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email",
                   class: "w-full px-2 py-4  text-smoke"
@@ -24,7 +24,7 @@
                    wrapper_html: { class: "bg-white font-base capitalize text-smoke" } %>
       <%= f.input :password,
                   label: 'Pwd :',
-                  required: false,
+                  required: true,
                   input_html: { autocomplete: "current-password",
                   class: "w-full px-2 py-4  text-smoke" },
                    wrapper_html: { class: "bg-white font-base capitalize text-smoke bold" }  %>
