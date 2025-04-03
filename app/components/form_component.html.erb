@@ -1,0 +1,9 @@
+# Note: Authentication forms (sign up/sign in) are handled separately by Devise
+# and can be found in app/views/devise/ directory. They don't use this component
+# due to their specific requirements and customizations.
+<%= simple_form_for(form, url: url, method: method, 
+                   html: { class: "space-y-6", multipart: multipart }, 
+                   data: { turbo: false }) do |f| %>
+  <%= content.call(f) if content.present? %>
+<% end %>
+

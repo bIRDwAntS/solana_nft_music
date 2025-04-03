@@ -5,59 +5,106 @@
 @plugin "./daisyui.js";
 
 @theme {
-    /* Variables de polices personnalisées */
-    --font-brand: 'Dirtyboy', sans-serif;
-    --font-base: 'Nugo', sans-serif;
-    --font-title: 'Dirtha', sans-serif;
-    --font-alt: 'Marianne', sans-serif;
-    --font-dush: 'Dush', sans-serif;
-    }
+  /* Variables de polices personnalisées */
+  --font-brand: "Dirtyboy", sans-serif;
+  --font-base: "Nugo", sans-serif;
+  --font-title: "Dirtha", sans-serif;
+  --font-alt: "Marianne", sans-serif;
+  --font-dush: "Dush", sans-serif;
+}
 
-   
 @layer utilities {
-
-    .text-shadow {
-        text-shadow: 0 6px 4px rgb(0, 0, 0);
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .animate-float {
-        animation: float 4s ease-in-out infinite;
-      }
-    /* .bg-mint { background-color: #BDE9E8;} */
-     /* ------ FontSize ------*/
-     .text-xs { font-size: 0.80rem;}
-     .text-sm { font-size: 0.95rem;}
-     .text-p { font-size: 1.1rem; }          /* Paragraphe standard */
-     .text-base { font-size: 1.5rem; }       /* Taille de base */
-     .text-h4 { font-size: 2rem; }       /* Heading 4 */
-     .text-h3 { font-size: 2.5rem; }       /* Heading 3 */
-     .text-h2 { font-size: 3.5rem; }         /* Heading 2 */
-     .text-h1 { font-size: 6.5rem; }       /* Heading 1 */
-     .text-huge-h1 { font-size: 8rem; }    /* Titre énorme */
-
-     /* Breakpoints */
-  .breakpoint-sm { width: 480px; }
-  .breakpoint-md { width: 768px; }
-  .breakpoint-lg { width: 1024px; }
-  .breakpoint-xl { width: 1280px; }
-  
-  /* Width Percentages */
-  .w-xs { width: 28.5714286%; }
-  .w-sm { width: 42.8571429%; }
-  .w-mid { width: 57.1428571%; }
-  .w-lg { width: 71.4285714%; }
-  .w-xl { width: 85.7142857%; }
-  
-  /* Height VH */
-  .h-xs { height: 25vh; }
-  .h-sm { height: 33.333vh; }
-  .h-mid { height: 50vh; }
-  .h-large { height: 66.666vh; }
-  .h-xl { height: 75vh; }
-  .h-2xl { height: 80vh; }
-  .h-3xl { height: 90vh; }
-
+  .text-shadow {
+    text-shadow: 0 6px 4px rgb(0, 0, 0);
   }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+  /* .bg-mint { background-color: #BDE9E8;} */
+  /* ------ FontSize ------*/
+  .text-xs {
+    font-size: 0.8rem;
+  }
+  .text-sm {
+    font-size: 0.95rem;
+  }
+  .text-p {
+    font-size: 1.1rem;
+  }
+  .text-base {
+    font-size: 1.5rem;
+  }
+  .text-h4 {
+    font-size: 2rem;
+  }
+  .text-h3 {
+    font-size: 2.5rem;
+  }
+  .text-h2 {
+    font-size: 3.5rem;
+  }
+  .text-h1 {
+    font-size: 6.5rem;
+  }
+  .text-huge-h1 {
+    font-size: 8rem;
+  }
+
+  /* Breakpoints */
+  .breakpoint-sm {
+    width: 480px;
+  }
+  .breakpoint-md {
+    width: 768px;
+  }
+  .breakpoint-lg {
+    width: 1024px;
+  }
+  .breakpoint-xl {
+    width: 1280px;
+  }
+
+  /* Width Percentages */
+  .w-xs {
+    width: 28.5714286%;
+  }
+  .w-sm {
+    width: 42.8571429%;
+  }
+  .w-mid {
+    width: 57.1428571%;
+  }
+  .w-lg {
+    width: 71.4285714%;
+  }
+  .w-xl {
+    width: 85.7142857%;
+  }
+
+  /* Height VH */
+  .h-xs {
+    height: 25vh;
+  }
+  .h-sm {
+    height: 33.333vh;
+  }
+  .h-mid {
+    height: 50vh;
+  }
+  .h-large {
+    height: 66.666vh;
+  }
+  .h-xl {
+    height: 75vh;
+  }
+  .h-2xl {
+    height: 80vh;
+  }
+  .h-3xl {
+    height: 90vh;
+  }
+}
