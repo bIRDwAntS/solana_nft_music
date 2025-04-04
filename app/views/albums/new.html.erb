@@ -1,12 +1,11 @@
+<!-- app/views/albums/new.html.erb -->
 <div class="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
   <div class="bg-white rounded-lg shadow">
     <div class="px-6 py-5 border-b border-gray-200">
       <h1 class="text-xl font-medium text-gray-900">Create New Album</h1>
     </div>
     <div class="px-6 py-5">
-      <%= turbo_frame_tag "album_form" do %>
-        <%= render(AlbumFormComponent.new(album: @album, genres: @genres)) %>
-      <% end %>
+      <%= render AlbumFormComponent.new(album: @album, genres: @genres) %>
     </div>
   </div>
 </div>
