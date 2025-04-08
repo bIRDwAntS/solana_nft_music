@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get 'genres/show'
   # Page d'accueil
   root 'home#index'
+
+  # devise_for :users, controllers: {
+  #   sessions: 'users/sessions'
+  # }
   
   resource :profile, only: [:edit, :update]
   

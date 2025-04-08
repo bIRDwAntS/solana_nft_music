@@ -2,24 +2,26 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   connect() {
-    // Auto-dismiss flash messages after 5 seconds
-    this.timeout = setTimeout(() => {
+    // Set a timeout to automatically dismiss the message
+    this.autoDismissTimeout = setTimeout(() => {
       this.dismiss()
-    }, 5000)
+    }, 5000) // 5 seconds
   }
-  
+
   disconnect() {
-    // Clear timeout if element is removed from DOM
-    if (this.timeout) {
-      clearTimeout(this.timeout)
+    // Clean up the timeout if the message is removed before it triggers
+    if (this.autoDismissTimeout) {
+      clearTimeout(this.autoDismissTimeout)
     }
   }
-  
+
   dismiss() {
-    // Fade out and remove the flash message
-    this.element.classList.add('opacity-0', 'transition-opacity', 'duration-500')
+    // Add a transition to smoothly fade out the message
+    this.element.classList.add("opacity-0", "transition-opacity", "duration-300")
+    
+    // Remove the element from the DOM after the transition finishes
     setTimeout(() => {
       this.element.remove()
-    }, 500)
+    }, 300)
   }
 }

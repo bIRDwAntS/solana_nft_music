@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
       if resource.sign_in_count == 1 && (resource.bio.blank? || !resource.profile_image.attached?)
         edit_profile_path
       else
-        stored_location_for(resource) || root_path
+        stored_location_for(resource) ||  user_path(resource) #redirect user to their profile page
+    
       end
     end
   end

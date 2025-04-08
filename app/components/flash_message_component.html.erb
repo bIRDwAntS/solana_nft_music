@@ -1,8 +1,10 @@
 <% if @flash.present? %>
-  <div id="flash-messages" class="fixed top-4 right-4 z-50 space-y-2">
+  <div id="flash-messages" class="fixed top-20 right-4 z-50 space-y-2">
     <% @flash.each do |type, message| %>
       <% alert_class = type.to_s == 'notice' ? 'bg-green-50 text-green-800 border-green-400' : 'bg-red-50 text-red-800 border-red-400' %>
-      <div class="<%= alert_class %> px-4 py-3 rounded-md border flash-message">
+      
+      <!-- Attach the Stimulus controller to each individual message -->
+      <div data-controller="flash" class="<%= alert_class %> px-4 py-3 rounded-md border flash-message transition-opacity duration-300">
         <div class="flex">
           <div class="flex-shrink-0">
             <% if type.to_s == 'notice' %>
@@ -20,6 +22,7 @@
           </div>
           <div class="ml-auto pl-3">
             <div class="-mx-1.5 -my-1.5">
+              <!-- The close button calls the dismiss action on the controller -->
               <button data-action="click->flash#dismiss" class="inline-flex rounded-md p-1.5 text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-600">
                 <span class="sr-only">Dismiss</span>
                 <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
