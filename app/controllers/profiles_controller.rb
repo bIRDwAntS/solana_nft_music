@@ -14,6 +14,16 @@ class ProfilesController < ApplicationController
         render :edit, status: :unprocessable_entity
       end
     end
+
+    def show 
+      @user = current_user
+      @latest_album = @user.albums.order(created_at: :desc).first
+      
+      # Get some basic stats for the user
+      @total_albums = @user.albums.count
+      @total_tracks = @user.tracks.count
+      @total_sales = @user.sales.count
+    end
     
     private
     

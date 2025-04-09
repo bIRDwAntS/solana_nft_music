@@ -1,0 +1,19 @@
+<div class="relative bg-slate-400 border-l-4 border-b-6 border-coal">
+ <div class="max-w-7xl mx-auto">
+    <h1 class="font-base text-h1 text-smoke">
+      <span class="block">
+        <%= greeting %>, <%= @user.username %>!
+      </span>
+    </h1>
+ </div>
+<div class="mt-4 text-xl text-indigo-100">
+  <% if has_albums? %>
+    <p>You have <%= @total_albums %> album<%= 's' if @total_albums != 1 %> with <%= @total_tracks %> track<%= 's' if @total_tracks != 1 %>.</p>
+    <% if has_sales? %>
+      <p class="mt-2">Your music has been purchased <%= @total_sales %> time<%= 's' if @total_sales != 1 %>!</p>
+    <% end %>
+  <% else %>
+    <p>Welcome to your artist profile! Start by creating your first album. TESTY</p>
+  <% end %>
+</div>
+</div>

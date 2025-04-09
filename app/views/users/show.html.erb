@@ -1,4 +1,21 @@
 <div>
-  <h1 class="font-bold text-4xl">Users#show</h1>
-  <p>Find me in app/views/users/show.html.erb</p>
+   <%= render ProfileHeroComponent.new(
+    user: @user, 
+    stats: { 
+      total_albums: @total_albums, 
+      total_tracks: @total_tracks, 
+      total_sales: @total_sales 
+    }
+  ) %>
 </div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <% if @latest_album.present? %>
+      <%= render LatestAlbumComponent.new(album: @latest_album) %>
+    <% else %>
+      <%= render EmptyAlbumComponent.new %>
+    <% end %>
+    
+    <!-- Additional sections can go here -->
+    <!-- For example: Recent Activity, Top Performing Tracks, etc. -->
+  </div>

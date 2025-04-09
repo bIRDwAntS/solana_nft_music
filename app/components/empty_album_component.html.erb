@@ -1,0 +1,12 @@
+<div class="container bg-amber-400">
+     <h3 class="text-lg leading-6 font-medium text-gray-900">Your Music Collection</h3>
+
+        <h3 class="mt-2 text-xl font-medium text-gray-900">No albums yet</h3>
+      <p class="mt-1 text-gray-500">Get started by creating your first album</p>
+
+         <% if @show_cta %>
+        <div class="mt-6">
+          <%= link_to "Create Your First Album", new_album_path, class: "btn bg-pink-400" %>
+        </div>
+      <% end %>
+</div>
