@@ -1,19 +1,27 @@
-<div class="relative bg-slate-400 border-l-4 border-b-6 border-coal">
- <div class="max-w-7xl mx-auto">
-    <h1 class="font-base text-h1 text-smoke">
+<div class="relative w-full grid md:grid-cols-3 grid-cols-1 gap-4 ">
+  <div class="col-span-2 bg-slate-400/10 border-1 border-slate-400/30 px-4 py-6 rounded-2xl">
+    <div class="col-span-2 ">
+      <h1 class="font-title text-h3 text-coal">
       <span class="block">
         <%= greeting %>, <%= @user.username %>!
       </span>
     </h1>
- </div>
-<div class="mt-4 text-xl text-indigo-100">
+    <p class="font-alt text-h3 text-coal  w-lg">
+    Welcome to your artist profile! 
+  </p>
+  </div>
+  </div>
+<div class="col-span-1 bg-slate-400/10 border-1 border-slate-400/30 px-4 py-8 rounded-2xl ">
   <% if has_albums? %>
     <p>You have <%= @total_albums %> album<%= 's' if @total_albums != 1 %> with <%= @total_tracks %> track<%= 's' if @total_tracks != 1 %>.</p>
     <% if has_sales? %>
       <p class="mt-2">Your music has been purchased <%= @total_sales %> time<%= 's' if @total_sales != 1 %>!</p>
     <% end %>
   <% else %>
-    <p>Welcome to your artist profile! Start by creating your first album. TESTY</p>
+ <div class="flex flex-col items-start justify-center gap-6 h-full">
+     <p class="font-base text-sm text-smoke uppercase">You have <span class="text-white bg-black px-2 py-1 whitespace-nowrap"><%= @total_albums %> album<%= 's' if @total_albums != 1 %></span> with <span class="text-white bg-black px-2 py-1 whitespace-nowrap"><%= @total_tracks %> track<%= 's' if @total_tracks != 1 %></span>.</p>
+    <p class="font-base text-sm text-smoke uppercase ">Start by creating your first album.</p>
+ </div>
   <% end %>
 </div>
 </div>

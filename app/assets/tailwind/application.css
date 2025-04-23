@@ -74,7 +74,7 @@
     width: 1280px;
   }
 
-  /* Width Percentages */
+  /* Width Percentages not WH */
   .w-xs {
     width: 28.5714286%;
   }
@@ -91,7 +91,7 @@
     width: 85.7142857%;
   }
 
-  /* Height VH */
+  /* Height in VH */
   .h-xs {
     height: 25vh;
   }

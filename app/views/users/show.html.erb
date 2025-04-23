@@ -1,3 +1,5 @@
+
+
 <div>
    <%= render ProfileHeroComponent.new(
     user: @user, 
@@ -9,13 +11,13 @@
   ) %>
 </div>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div >
     <% if @latest_album.present? %>
       <%= render LatestAlbumComponent.new(album: @latest_album) %>
     <% else %>
       <%= render EmptyAlbumComponent.new %>
     <% end %>
-    
-    <!-- Additional sections can go here -->
-    <!-- For example: Recent Activity, Top Performing Tracks, etc. -->
   </div>
+
+ 
+  
